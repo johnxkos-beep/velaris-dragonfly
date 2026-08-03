@@ -12,7 +12,17 @@ func main() {
 	log := slog.New(slog.NewTextHandler(os.Stdout, nil))
 	slog.SetDefault(log)
 
-	conf, err := server.DefaultConfig().Config(log)
+	// Use Pterodactyl's SERVER_PORT env var if set, so the listen address
+	// always matches whatever allocation is assigned in the panel.
+	port := os.Getenv("SERVER_PORT")
+	if port == "" {
+		port = "19132"
+	}
+
+	userConf := server.DefaultConfig()
+	userConf.Network.Address = ":" + port
+
+	conf, err := userConf.Config(log)
 	if err != nil {
 		log.Error(err.Error())
 		os.Exit(1)
@@ -30,3 +40,4 @@ func main() {
 		_ = p // handle joining players here later
 	}
 }
+
