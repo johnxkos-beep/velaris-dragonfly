@@ -2,11 +2,12 @@ module github.com/johnxkos-beep/velaris-dragonfly
 
 go 1.26.1
 
+require github.com/df-mc/dragonfly v0.11.2-0.20260805225357-ca9170212b92
+
 require (
 	github.com/brentp/intintmap v0.0.0-20251106190759-56907b1f8479 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/coreos/go-oidc/v3 v3.17.0 // indirect
-	github.com/df-mc/dragonfly v0.11.1-0.20260726190118-daad82a123a5 // indirect
 	github.com/df-mc/go-nethernet v1.0.17 // indirect
 	github.com/df-mc/go-playfab v1.0.0 // indirect
 	github.com/df-mc/go-xsapi v1.0.1 // indirect
@@ -18,7 +19,6 @@ require (
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/compress v1.18.4 // indirect
-	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pion/datachannel v1.6.0 // indirect
 	github.com/pion/dtls/v3 v3.1.2 // indirect
 	github.com/pion/ice/v4 v4.2.1 // indirect
@@ -35,8 +35,8 @@ require (
 	github.com/pion/transport/v4 v4.0.1 // indirect
 	github.com/pion/turn/v4 v4.1.4 // indirect
 	github.com/pion/webrtc/v4 v4.2.10-0.20260224155637-aa3b95c72dd2 // indirect
-	github.com/sandertv/go-raknet v1.15.1-0.20260112202637-beca0b10c217 // indirect
-	github.com/sandertv/gophertunnel v1.57.2-0.20260720171832-1706d533aa80 // indirect
+	github.com/sandertv/go-raknet v1.15.2-0.20260705184311-0d1fd09e2cf6 // indirect
+	github.com/sandertv/gophertunnel v1.58.0 // indirect
 	github.com/segmentio/fasthash v1.0.3 // indirect
 	github.com/wlynxg/anet v0.0.5 // indirect
 	golang.org/x/crypto v0.48.0 // indirect
