@@ -3,7 +3,7 @@ module velaris-dragonfly
 go 1.26.0
 
 require (
-	github.com/df-mc/dragonfly v0.11.2-0.20260805225357-ca9170212b92
+	github.com/df-mc/dragonfly v0.11.2
 	github.com/go-gl/mathgl v1.2.0
 )
 
