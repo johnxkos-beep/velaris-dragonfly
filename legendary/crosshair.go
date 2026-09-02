@@ -77,7 +77,7 @@ var (
 // called from OnUse (see abilities.go) so it starts the first time any
 // player uses any legendary weapon. Cheap and safe to call repeatedly;
 // it's a no-op after the very first successful call for the whole server.
-func EnsureCrosshair(tx *world.Tx) {
+func EnsureCrosshair(tx *world.Tx, p *player.Player) {
 	crosshairTickerMu.Lock()
 	if crosshairTickerRunning {
 		crosshairTickerMu.Unlock()
