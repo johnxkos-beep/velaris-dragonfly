@@ -264,7 +264,7 @@ func OnUse(tx *world.Tx, p *player.Player) bool {
 		return false
 	}
 	id := w.WeaponDef().ID
-	EnsureCrosshair(tx) // starts the single global crosshair ticker the first time ANY player uses ANY legendary — see crosshair.go's doc comment
+	EnsureCrosshair(tx, p)// starts the single global crosshair ticker the first time ANY player uses ANY legendary — see crosshair.go's doc comment
 	ticks := cooldownTicks(id)
 	if ticks == 0 {
 		return false // Midas Sword/Crimson Chain Sword: no interact ability
