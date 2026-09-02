@@ -86,7 +86,7 @@ func EnsureCrosshair(tx *world.Tx, p *player.Player) {
 	crosshairTickerRunning = true
 	crosshairTickerMu.Unlock()
 
-	handle := world.EntitySpawnOpts{}.New(CrosshairTickerType, CrosshairConfig{})
+	handle := world.EntitySpawnOpts{Position: p.Position()}.New(CrosshairTickerType, CrosshairConfig{})
 	tx.AddEntity(handle)
 }
 
